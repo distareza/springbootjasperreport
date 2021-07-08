@@ -18,4 +18,10 @@ public class TestEmployeeReportService {
 		assertTrue(true);
 	}
 	
+	@Test
+	public void streamPDFReport() throws Exception {
+		System.out.println( report.streamReport("pdf") );
+		assertTrue(true);
+	}
+	
 }
