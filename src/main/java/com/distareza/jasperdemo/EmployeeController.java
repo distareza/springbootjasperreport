@@ -34,7 +34,7 @@ public class EmployeeController {
 	
 	@GetMapping("/save/{format}")
 	public String generateReport(@PathVariable String format) throws Exception {
-		return report.exportReport(format);
+		return report.saveReport(format);
 	}
 	
 	@RequestMapping("/export/{format}")

@@ -34,7 +34,7 @@ public class EmployeeReportService {
 	@Autowired
 	private EmployeeRepository repository;
 
-	public String exportReport(String format) throws FileNotFoundException, JRException {
+	public String saveReport(String format) throws FileNotFoundException, JRException {
 		List<Employee> employees = repository.findAll();
 		
 		// Load the Report Template

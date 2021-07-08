@@ -13,8 +13,8 @@ public class TestEmployeeReportService {
 	private EmployeeReportService report;
 	
 	@Test
-	public void exportPDFReport() throws Exception {
-		System.out.println( report.exportReport("pdf") );
+	public void savePDFReport() throws Exception {
+		System.out.println( report.saveReport("pdf") );
 		assertTrue(true);
 	}
 	
