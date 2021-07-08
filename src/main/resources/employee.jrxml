@@ -2,11 +2,13 @@
 <!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="employees" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eec132c2-8c63-4fe4-9b6a-8e852999f2e7">
 
+	<parameter name="createdBy" class="java.lang.String"/>
+
 	<field name="id" class="java.lang.Long"></field>
 	<field name="name" class="java.lang.String"></field>
 	<field name="job" class="java.lang.String"></field>
 	<field name="salary" class="java.lang.Double"></field>
-	
+
 	<background>
 		<band/>
 	</background>
@@ -28,6 +30,11 @@
 					</textElement>
 					<text><![CDATA[example jasper report]]></text>
 				</staticText>
+				<textField>
+					<reportElement x="320" y="0" width="275" height="20" uuid="92b92c42-5c7c-4806-9099-445160800317"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$P{createdBy}]]></textFieldExpression>
+				</textField>
 			</frame>
 		</band>
 	</title>

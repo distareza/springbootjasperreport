@@ -2,6 +2,8 @@ package com.distareza.jasperdemo;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,7 +36,7 @@ public class EmployeeReportService {
 		// bound data
 		JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(employees);
 		Map<String,Object> parameters = new HashMap<>();
-		parameters.put("createdBy", "Spring Boot Jasper Report");		
+		parameters.put("createdBy", String.format("Created By : %s Spring Boot Jasper Report", new SimpleDateFormat("dd/MMM/yyyy HH:mm:ss").format(new Date())));		
 		JasperPrint jasperPrint = JasperFillManager.fillReport(report, parameters, dataSource);
 		
 		if ("pdf".equalsIgnoreCase(format)) {
